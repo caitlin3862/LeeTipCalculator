@@ -25,6 +25,7 @@ public class Main {
         // outputs
         System.out.println("------------------------------");
         System.out.println("Total bill before tip: $" + totalCost1);
+        System.out.println("Total percentage: " + percent + "%");
 
             }
         }
