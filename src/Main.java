@@ -3,22 +3,31 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the tip calculator!");
-        //inputs
-        System.out.println("How many people are in your group? ");
+        // inputs
+        System.out.print("How many people are in your group? ");
         int customers = scan.nextInt();
-        System.out.println("What's the tip percentage? (0-100): ");
+        System.out.print("What's the tip percentage? (0-100): ");
         int percent = scan.nextInt();
 
-        System.out.println("Eneter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
+        System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
         double cost = scan.nextDouble();
-        if (cost != -1) {
-            while (cost != -1) {
-                System.out.println("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
-                double cost = scan.nextDouble();
-        } else {
-            System.out.println("------------------------------");
+        double totalCost1 = cost;
+        while (cost != -1) {
+            System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
+            cost = scan.nextDouble();
+            if (cost != -1) {
+                totalCost1 = totalCost1 + cost;
+            } else {
+                totalCost1= totalCost1;
+            }
+            }
+
+        // outputs
+        System.out.println("------------------------------");
+        System.out.println("Total bill before tip: $" + totalCost1);
+
             }
         }
-        //outputs
-        }
-    }
+
+
+
