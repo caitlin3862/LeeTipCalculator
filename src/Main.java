@@ -27,6 +27,10 @@ public class Main {
         System.out.println("Total bill before tip: $" + totalCost1);
         System.out.println("Total percentage: " + percent + "%");
 
+        double tip = totalCost1*((double)percent / 100);
+
+        System.out.println("Total tip: $" + tip);
+
             }
         }
 
