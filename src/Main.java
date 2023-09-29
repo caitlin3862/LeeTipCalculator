@@ -18,7 +18,7 @@ public class Main {
             if (cost != -1) {
                 totalCost1 = totalCost1 + cost;
             } else {
-                totalCost1= totalCost1;
+                totalCost1 = totalCost1;
             }
             }
 
