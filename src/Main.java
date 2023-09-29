@@ -11,10 +11,14 @@ public class Main {
 
         System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
         double cost = scan.nextDouble();
+        System.out.print("Enter the item: ");
+        String item = scan.nextLine();
         double totalCost1 = cost;
         while (cost != -1) {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
+            System.out.print("Enter the item: ");
+            item = scan.nextLine();
             if (cost != -1) {
                 totalCost1 = totalCost1 + cost;
             } else {
@@ -30,6 +34,18 @@ public class Main {
         double tip = totalCost1*((double)percent / 100);
 
         System.out.println("Total tip: $" + tip);
+
+        double finalTip = totalCost1 + tip;
+        System.out.println("Total bill with tip: $" + finalTip);
+
+        double personNoTip = totalCost1 / customers;
+        System.out.println("Per person cost before tip: $" + personNoTip);
+
+        double personTip = tip / customers;
+        System.out.println("Tip per person: $" + personTip);
+
+        double costPerPerson = personTip + personNoTip;
+        System.out.println("Total cost per person: $"+ costPerPerson);
 
             }
         }
