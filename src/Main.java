@@ -1,7 +1,9 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        ArrayList<String> listOfItems = new ArrayList<>();
         System.out.println("Welcome to the tip calculator!");
         // inputs
         System.out.print("How many people are in your group? ");
@@ -10,25 +12,27 @@ public class Main {
         int percent = scan.nextInt();
         System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
         double cost = scan.nextDouble();
-        System.out.print("Enter the item: ");
-        String item = scan.nextLine();
-        System.out.println();
+       // System.out.print("Enter the item: ");
+        //listOfItems.add(scan.nextLine());
+        //scan.nextLine();
+       // System.out.println(listOfItems);
         double totalCost1 = cost;
         while (cost != -1) {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
-            System.out.print("Enter the item: ");
-            item = scan.nextLine();
-            System.out.println();
             if (cost != -1) {
                 totalCost1 = totalCost1 + cost;
+              //  System.out.print("Enter the item: ");
+                //String item = scan.nextLine();
+                //listOfItems.add(scan.nextLine());
             } else {
                 totalCost1 = totalCost1;
             }
-            }
+        }
         // freestyle is customer review for restaurant
         System.out.print("Do you have any feedback for this restaurant? (Y/N) ");
         String feedback = scan.nextLine();
+        scan.nextLine();
         int stars = 0;
         if (feedback.equals("Y")) {
             System.out.print("What feedback do you have for this restaurant?");
@@ -47,7 +51,7 @@ public class Main {
         System.out.println("Total bill before tip: $" + totalCost1);
         System.out.println("Total percentage: " + percent + "%");
 
-        double tip = totalCost1*((double)percent / 100);
+        double tip = totalCost1 * ((double) percent / 100);
         double tip2 = Math.round(tip * 100.0) / 100.0;
         System.out.println("Total tip: $" + tip2);
 
@@ -65,17 +69,19 @@ public class Main {
 
         double costPerPerson = personTip + personNoTip;
         double costPerPerson2 = Math.round(costPerPerson * 100.0) / 100.0;
-        System.out.println("Total cost per person: $"+ costPerPerson2);
-
+        System.out.println("Total cost per person: $" + costPerPerson2);
+        System.out.println("------------------------------");
+        /*System.out.println("Items ordered:");
+        for (String i : listOfItems) {
+            System.out.println(i);
+        }
+        */
         //freestyle
-        System.out.println();
         System.out.println("Stars given: " + stars);
         System.out.println("------------------------------");
 
-
-
-            }
-        }
+    }
+}
 
 
 
