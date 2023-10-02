@@ -26,6 +26,21 @@ public class Main {
                 totalCost1 = totalCost1;
             }
             }
+        // freestyle is customer review for restaurant
+        System.out.print("Do you have any feedback for this restaurant? (Y/N) ");
+        String feedback = scan.nextLine();
+        int stars = 0;
+        if (feedback.equals("Y")) {
+            System.out.print("What feedback do you have for this restaurant?");
+            String finalFeed = scan.nextLine();
+            System.out.print("Rate this restaurant (1-5 stars): ");
+            stars = scan.nextInt();
+        } else {
+            System.out.print("Rate this restaurant (1-5 stars): ");
+            stars = scan.nextInt();
+        }
+        System.out.println("Thank you for your time!");
+
 
         // outputs
         System.out.println("------------------------------");
@@ -51,6 +66,11 @@ public class Main {
         double costPerPerson = personTip + personNoTip;
         double costPerPerson2 = Math.round(costPerPerson * 100.0) / 100.0;
         System.out.println("Total cost per person: $"+ costPerPerson2);
+
+        //freestyle
+        System.out.println();
+        System.out.println("Stars given: " + stars);
+        System.out.println("------------------------------");
 
 
 
